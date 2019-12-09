@@ -21,6 +21,22 @@ void Swap(int* x, int* y) {
 	*y = tmp;
 }//参数传指针的方式可以让一个函数从内部修改函数外部的变量，这样的参数称为输出型参数
 
+//如果返回1认为是素数，返回0认为不是素数
+int IsPrime(int num) {
+	if (num == 0) {
+		return 0;
+	}
+	if (num == 1) {
+		return 0;
+	}
+	for (int i = 2; i < num; i++) {
+		if (num % i == 0) {
+			return 0;
+		}
+	}
+	return 1;
+}
+
 int main() {
 	
 	//int ret = Max(10, 20)/*实参*/;//函数调用
@@ -52,6 +68,8 @@ int main() {
 	//int tmp = *x;//这里的*为解引用操作符
 	//*x = *y;
 	//*y = tmp;//对*x和*y的交换，就是对a和b的交换
+
+	printf("%d\n", IsPrime(97));
 
 	system("pause");
 	return 0;

@@ -51,7 +51,6 @@
 //	int i;
 //	for (i = 2; i < n; i++)//如果在2~n-1中存在因子，则不是素数;
 //	if (n%i == 0)return 0;
-//
 //	return 1;
 //}
 //int main()
